@@ -1,0 +1,2 @@
+org.springframework.test.context.ContextCustomizerFactory = com.medihelp.\
+    presupuesto.config.SqlTestContainersSpringContextCustomizerFactory
