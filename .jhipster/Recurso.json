@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20241101201330"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "mes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "observacion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Recurso",
+  "relationships": [
+    {
+      "otherEntityName": "tipoRecurso",
+      "otherEntityRelationshipName": "recurso",
+      "relationshipName": "tipoRecurso",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "presupuesto",
+      "otherEntityRelationshipName": "recurso",
+      "relationshipName": "presupuesto",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

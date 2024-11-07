@@ -50,6 +50,21 @@ public class CacheConfiguration {
             createCache(cm, com.medihelp.presupuesto.domain.User.class.getName());
             createCache(cm, com.medihelp.presupuesto.domain.Authority.class.getName());
             createCache(cm, com.medihelp.presupuesto.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.medihelp.presupuesto.domain.Presupuesto.class.getName());
+            createCache(cm, com.medihelp.presupuesto.domain.Presupuesto.class.getName() + ".recursos");
+            createCache(cm, com.medihelp.presupuesto.domain.Plan.class.getName());
+            createCache(cm, com.medihelp.presupuesto.domain.Plan.class.getName() + ".subPlans");
+            createCache(cm, com.medihelp.presupuesto.domain.Plan.class.getName() + ".presupuestos");
+            createCache(cm, com.medihelp.presupuesto.domain.SubPlan.class.getName());
+            createCache(cm, com.medihelp.presupuesto.domain.UnidadFuncional.class.getName());
+            createCache(cm, com.medihelp.presupuesto.domain.UnidadFuncional.class.getName() + ".presupuestos");
+            createCache(cm, com.medihelp.presupuesto.domain.Rubro.class.getName());
+            createCache(cm, com.medihelp.presupuesto.domain.Rubro.class.getName() + ".presupuestos");
+            createCache(cm, com.medihelp.presupuesto.domain.CentroCosto.class.getName());
+            createCache(cm, com.medihelp.presupuesto.domain.CentroCosto.class.getName() + ".presupuestos");
+            createCache(cm, com.medihelp.presupuesto.domain.Recurso.class.getName());
+            createCache(cm, com.medihelp.presupuesto.domain.TipoRecurso.class.getName());
+            createCache(cm, com.medihelp.presupuesto.domain.TipoRecurso.class.getName() + ".recursos");
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -15,11 +15,16 @@ a {
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-size: 14px;
   &:after,
   &::before {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+}
+
+.min-height {
+  height: min-content;
 }
 
 .app-container {

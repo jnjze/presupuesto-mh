@@ -1,0 +1,59 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="es">
+  <head>
+    <title th:text="#{email.notification.title}">Notificación de cambio de estado - Medihelp Presupuesto</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; margin: 0; padding: 0">
+    <header style="text-align: center; background-color: #f5f5f5; padding: 20px">
+      <img src="https://portal.clinicamedihelp.com/www/assets/img/MediHelp/logo-medihelp.svg" alt="Logo de Medihelp" style="width: 150px" />
+    </header>
+
+    <div
+      style="
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h2 th:text="#{email.notification.title}" style="color: #0066cc; text-align: center; font-size: 1.4em; margin-top: 0">
+        Cambio en el Estado de tu Solicitud
+      </h2>
+
+      <p th:text="#{email.notification.greeting(${name})}" style="font-size: 1.1em; font-weight: bold">Estimado/a,</p>
+
+      <p style="margin-top: 20px; font-size: 1em">
+        Nos gustaría informarte que el estado de tu solicitud de presupuesto ha sido actualizado. A continuación, se presentan los detalles
+        de la solicitud:
+      </p>
+
+      <table style="width: 100%; margin-top: 20px; border-collapse: collapse">
+        <tr>
+          <td style="padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd; font-weight: bold">Consecutivo:</td>
+          <td style="padding: 10px; border: 1px solid #ddd" th:text="${consecutivo}">12345</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd; font-weight: bold">Nuevo Estado:</td>
+          <td style="padding: 10px; border: 1px solid #ddd" th:text="${estado}">Aprobado</td>
+        </tr>
+      </table>
+
+      <p style="margin-top: 20px">
+        Si tienes alguna pregunta o necesitas más información, no dudes en ponerte en contacto con nuestro equipo de soporte. Estamos aquí
+        para ayudarte en cada paso del proceso.
+      </p>
+
+      <p style="margin-top: 20px">
+        <span th:text="#{email.notification.text2}">Saludos cordiales,</span><br />
+        <em th:text="#{email.signature}" style="color: #666">Medihelp Presupuesto.</em>
+      </p>
+    </div>
+
+    <footer style="text-align: center; font-size: 0.9em; color: #999; padding: 20px; background-color: #f5f5f5">
+      © 2024 Medihelp. Todos los derechos reservados.
+    </footer>
+  </body>
+</html>

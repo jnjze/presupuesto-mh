@@ -1,0 +1,86 @@
+{
+  "annotations": {
+    "changelogDate": "20241101201324"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "consecutivo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "descripcionActividad",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaInicio",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fechaFinal",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fechaRegistro",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nombreResponsable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "Estado",
+      "fieldValues": "APROBADO,RECHAZADO,SIN_ASIGNAR"
+    },
+    {
+      "fieldName": "correoResponsable",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Presupuesto",
+  "relationships": [
+    {
+      "otherEntityName": "recurso",
+      "otherEntityRelationshipName": "presupuesto",
+      "relationshipName": "recurso",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "plan",
+      "otherEntityRelationshipName": "presupuesto",
+      "relationshipName": "plan",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "unidadFuncional",
+      "otherEntityRelationshipName": "presupuesto",
+      "relationshipName": "unidadFuncional",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "rubro",
+      "otherEntityRelationshipName": "presupuesto",
+      "relationshipName": "rubro",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "centroCosto",
+      "otherEntityRelationshipName": "presupuesto",
+      "relationshipName": "centroCosto",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

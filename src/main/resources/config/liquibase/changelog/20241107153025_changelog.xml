@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="juan.pomares (generated)" id="1730993445178-2">
+        <createSequence incrementBy="1" sequenceName="cargo_sequence" startValue="1"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730993445178-3">
+        <createTable tableName="cargo">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="cargoPK"/>
+            </column>
+            <column name="codigo" type="VARCHAR(255)"/>
+            <column name="nombre" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730993445178-4">
+        <addColumn tableName="recurso">
+            <column name="cargo_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730993445178-5">
+        <addForeignKeyConstraint baseColumnNames="cargo_id" baseTableName="recurso" constraintName="FKmhvr3ermgrr2yufryrp9us8wb" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="cargo" validate="true"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730993445178-6">
+        <dropSequence sequenceName="sequence_generator"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730993445178-1">
+        <modifyDataType columnName="email" newDataType="varchar(254)" tableName="jhi_user"/>
+    </changeSet>
+</databaseChangeLog>

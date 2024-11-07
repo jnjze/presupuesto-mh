@@ -1,0 +1,33 @@
+{
+  "annotations": {
+    "changelogDate": "20241101201329"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "CentroCosto",
+  "relationships": [
+    {
+      "otherEntityName": "presupuesto",
+      "otherEntityRelationshipName": "centroCosto",
+      "relationshipName": "presupuesto",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

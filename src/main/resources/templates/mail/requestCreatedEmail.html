@@ -1,0 +1,53 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="es">
+  <head>
+    <title th:text="#{email.creation.title}">Solicitud de Presupuesto Creada Exitosamente - Medihelp Presupuesto</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #333333;
+      }
+      .header {
+        background-color: #f7f7f7;
+        padding: 20px;
+        text-align: center;
+      }
+      .content {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background-color: #ffffff;
+      }
+      .footer {
+        font-size: 12px;
+        color: #666666;
+        text-align: center;
+        margin-top: 20px;
+      }
+      h1 {
+        color: #0056a3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="https://portal.clinicamedihelp.com/www/assets/img/MediHelp/logo-medihelp.svg" alt="Medihelp Logo" style="width: 150px" />
+    </div>
+    <div class="content">
+      <h1 th:text="#{email.creation.greeting}">Estimado/a</h1>
+      <p th:text="#{email.creation2.text1(${consecutivo})}">
+        Te informamos que tu solicitud de presupuesto con el consecutivo {0} ha sido creada exitosamente.
+      </p>
+      <p>
+        A continuación esta solicitud será revisada para su aprobación, devolución para corrección o rechazo. un próximo correo eléctronico
+        será enviado con el cambio de estado
+      </p>
+      <p th:text="#{email.signature}">Medihelp Presupuesto.</p>
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Medihelp. Todos los derechos reservados.</p>
+    </div>
+  </body>
+</html>

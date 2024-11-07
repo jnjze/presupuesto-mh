@@ -1,0 +1,30 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="juan.pomares (generated)" id="1730658450605-1">
+        <createSequence incrementBy="50" sequenceName="contro_costo_sequence" startValue="100"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730658450605-2">
+        <createSequence incrementBy="1" sequenceName="jhi_user_sequence" startValue="100"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730658450605-3">
+        <createSequence incrementBy="1" sequenceName="plan_sequence" startValue="100"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730658450605-4">
+        <createSequence incrementBy="1" sequenceName="presupuesto_sequence" startValue="100"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730658450605-5">
+        <createSequence incrementBy="1" sequenceName="recurso_sequence" startValue="100"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730658450605-6">
+        <createSequence incrementBy="1" sequenceName="rubro_sequence" startValue="100"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730658450605-7">
+        <createSequence incrementBy="1" sequenceName="sub_plan_sequence" startValue="100"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730658450605-8">
+        <createSequence incrementBy="1" sequenceName="tipo_recurso_sequence" startValue="100"/>
+    </changeSet>
+    <changeSet author="juan.pomares (generated)" id="1730658450605-9">
+        <createSequence incrementBy="1" sequenceName="unidad_funcional_sequence" startValue="100"/>
+    </changeSet>
+</databaseChangeLog>

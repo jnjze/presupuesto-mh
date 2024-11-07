@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20241101201325"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Plan",
+  "relationships": [
+    {
+      "otherEntityName": "subPlan",
+      "otherEntityRelationshipName": "plan",
+      "relationshipName": "subPlan",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "presupuesto",
+      "otherEntityRelationshipName": "plan",
+      "relationshipName": "presupuesto",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

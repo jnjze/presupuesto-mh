@@ -15,6 +15,8 @@ import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 import PageNotFound from 'app/shared/error/page-not-found';
 import { AUTHORITIES } from 'app/config/constants';
 
+import PresupuestoForm from 'app/modules/presupuesto-public/presupuesto-form';
+
 const loading = <div>loading ...</div>;
 
 const Account = Loadable({
@@ -32,12 +34,13 @@ const AppRoutes = () => {
       <ErrorBoundaryRoutes>
         <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
+        <Route path="presupuesto-form/:id?" element={<PresupuestoForm />} />
         <Route path="logout" element={<Logout />} />
         <Route path="account">
           <Route
             path="*"
             element={
-              <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]}>
+              <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.EMPLOYMENT, AUTHORITIES.APPROVER]}>
                 <Account />
               </PrivateRoute>
             }
@@ -60,7 +63,7 @@ const AppRoutes = () => {
         <Route
           path="*"
           element={
-            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.USER]}>
+            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.APPROVER]}>
               <EntitiesRoutes />
             </PrivateRoute>
           }

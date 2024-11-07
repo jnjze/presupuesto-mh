@@ -1,0 +1,33 @@
+{
+  "annotations": {
+    "changelogDate": "20241101201326"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "SubPlan",
+  "relationships": [
+    {
+      "otherEntityName": "plan",
+      "otherEntityRelationshipName": "subPlan",
+      "relationshipName": "plan",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -7,8 +7,8 @@ import { Col, Row } from 'reactstrap';
 const Footer = () => (
   <div className="footer page-content">
     <Row>
-      <Col md="12">
-        <p>Pie de página</p>
+      <Col md="12" style={{ textAlign: 'center', marginTop: '10px' }}>
+        <p className="center">Medihelp Services 2024</p>
       </Col>
     </Row>
   </div>

@@ -95,7 +95,7 @@ spring:
     name: presupuesto
   docker:
     compose:
-      enabled: true
+      enabled: false
       lifecycle-management: start-only
       file: src/main/docker/services.yml
   profiles:
@@ -167,6 +167,18 @@ spring:
     ansi:
       console-available: true
 
+  mail:
+    host: smtp.sendgrid.net
+    port: 587
+    username: apikey
+    password: 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 # Replace with your actual API key
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
 server:
   servlet:
     session:
@@ -199,12 +211,12 @@ jhipster:
   #   allow-credentials: true
   #   max-age: 1800
   mail:
-    from: presupuesto@localhost
+    from: jnjzepomares@gmail.com
   api-docs:
     default-include-pattern: /api/**
     management-include-pattern: /management/**
     title: Presupuesto API
-    description: Presupuesto API documentation
+    description: Presupuesto API documentación
     version: 0.0.1
     terms-of-service-url:
     contact-name:

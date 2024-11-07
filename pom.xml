@@ -342,6 +342,11 @@
             <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
+      <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>pdfbox</artifactId>
+        <version>2.0.29</version>
+      </dependency>
     </dependencies>
 
     <build>
@@ -922,9 +927,9 @@
             </activation>
             <properties>
                 <!-- default Spring profiles -->
-                <liquibase-plugin.password>password</liquibase-plugin.password>
-                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/presupuesto</liquibase-plugin.url>
-                <liquibase-plugin.username>presupuesto</liquibase-plugin.username>
+                <liquibase-plugin.password>P@ssW0rD!Z7bQ5xcvEvfd93nf</liquibase-plugin.password>
+                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/mh_presupuesto_db</liquibase-plugin.url>
+                <liquibase-plugin.username>userX9T4ZP</liquibase-plugin.username>
                 <profile.test>testdev</profile.test>
                 <spring.profiles.active>dev${profile.tls}${profile.no-liquibase}</spring.profiles.active>
             </properties>

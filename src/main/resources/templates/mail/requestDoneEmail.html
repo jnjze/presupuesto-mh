@@ -1,0 +1,54 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="es">
+  <head>
+    <title th:text="#{email.finalized.title}">Solicitud de Presupuesto Finalizada</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #333333;
+      }
+      .header {
+        background-color: #f7f7f7;
+        padding: 20px;
+        text-align: center;
+      }
+      .content {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background-color: #ffffff;
+      }
+      .footer {
+        font-size: 12px;
+        color: #666666;
+        text-align: center;
+        margin-top: 20px;
+      }
+      h1 {
+        color: #0056a3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="https://portal.clinicamedihelp.com/www/assets/img/MediHelp/logo-medihelp.svg" alt="Medihelp Logo" style="width: 150px" />
+    </div>
+    <div class="content">
+      <h1 th:text="#{email.finalized.greeting}">Estimado/a</h1>
+      <p th:text="#{email.finalized.text1(${consecutivo})}">
+        Nos complace informarte que tu solicitud de presupuesto con el consecutivo {0} ha sido finalizada exitosamente.
+      </p>
+      <p th:text="#{email.finalized.text2}">
+        Hemos adjuntado un archivo PDF con los detalles de tu solicitud. Por favor, descarga el archivo para su impresión.
+      </p>
+      <p th:text="#{email.finalized.text3}">Si tienes alguna duda o necesitas asistencia, no dudes en ponerte en contacto con nosotros.</p>
+      <p th:text="#{email.finalized.thankYou}">Gracias por elegir Medihelp,</p>
+      <p th:text="#{email.signature}">Medihelp Presupuesto.</p>
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Medihelp. Todos los derechos reservados.</p>
+    </div>
+  </body>
+</html>

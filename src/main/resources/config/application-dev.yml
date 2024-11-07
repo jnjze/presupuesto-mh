@@ -32,20 +32,15 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/presupuesto
-    username: presupuesto
-    password: password
+    url: jdbc:postgresql://localhost:5432/mh_presupuesto_db
+    username: userX9T4ZP
+    password: P@ssW0rD!Z7bQ5xcvEvfd93nf
     hikari:
       poolName: Hikari
       auto-commit: false
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
-  mail:
-    host: localhost
-    port: 25
-    username:
-    password:
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:

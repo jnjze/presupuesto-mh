@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Presupuesto.
+    -->
+    <changeSet id="20241101201324-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="plan_id"
+                                 baseTableName="presupuesto"
+                                 constraintName="fk_presupuesto__plan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plan"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="unidad_funcional_id"
+                                 baseTableName="presupuesto"
+                                 constraintName="fk_presupuesto__unidad_funcional_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unidad_funcional"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="rubro_id"
+                                 baseTableName="presupuesto"
+                                 constraintName="fk_presupuesto__rubro_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rubro"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="centro_costo_id"
+                                 baseTableName="presupuesto"
+                                 constraintName="fk_presupuesto__centro_costo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="centro_costo"
+                                 />
+    </changeSet>
+</databaseChangeLog>
