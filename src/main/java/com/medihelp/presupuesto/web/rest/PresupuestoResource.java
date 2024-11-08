@@ -104,14 +104,11 @@ public class PresupuestoResource {
             throw new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound");
         }
 
-        Optional<PresupuestoDTO> savedPresupuesto = presupuestoService.findOne(presupuestoDTO.getId());
+        PresupuestoDTO savedPresupuesto = presupuestoService
+            .findOne(presupuestoDTO.getId())
+            .orElseThrow(() -> new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound"));
 
-        boolean sendUpdateNotification;
-        if (savedPresupuesto.isPresent()) {
-            sendUpdateNotification = !savedPresupuesto.get().getEstado().equals(presupuestoDTO.getEstado());
-        } else {
-            throw new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound");
-        }
+        boolean sendUpdateNotification = !savedPresupuesto.getEstado().equals(presupuestoDTO.getEstado());
 
         presupuestoDTO = presupuestoService.update(presupuestoDTO);
 

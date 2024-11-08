@@ -11,9 +11,7 @@ public class HeaderCustom {
         HttpHeaders headers = new HttpHeaders();
         headers.add("X-" + applicationName + "-alert", message);
 
-        try {
-            headers.add("X-" + applicationName + "-params", URLEncoder.encode(param, StandardCharsets.UTF_8.toString()));
-        } catch (UnsupportedEncodingException var5) {}
+        headers.add("X-" + applicationName + "-params", URLEncoder.encode(param, StandardCharsets.UTF_8));
 
         return headers;
     }
