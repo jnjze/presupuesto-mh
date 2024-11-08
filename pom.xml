@@ -927,9 +927,9 @@
             </activation>
             <properties>
                 <!-- default Spring profiles -->
-                <liquibase-plugin.password>P@ssW0rD!Z7bQ5xcvEvfd93nf</liquibase-plugin.password>
-                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/mh_presupuesto_db</liquibase-plugin.url>
-                <liquibase-plugin.username>userX9T4ZP</liquibase-plugin.username>
+                <liquibase-plugin.password>M3dihelp3$</liquibase-plugin.password>
+                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/mh_presupuesto_db_prd</liquibase-plugin.url>
+                <liquibase-plugin.username>mhprdusrjdd234$</liquibase-plugin.username>
                 <profile.test>testdev</profile.test>
                 <spring.profiles.active>dev${profile.tls}${profile.no-liquibase}</spring.profiles.active>
             </properties>

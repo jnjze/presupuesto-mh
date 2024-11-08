@@ -65,6 +65,7 @@ public class CacheConfiguration {
             createCache(cm, com.medihelp.presupuesto.domain.Recurso.class.getName());
             createCache(cm, com.medihelp.presupuesto.domain.TipoRecurso.class.getName());
             createCache(cm, com.medihelp.presupuesto.domain.TipoRecurso.class.getName() + ".recursos");
+            createCache(cm, com.medihelp.presupuesto.domain.Cargo.class.getName() + ".cargos");
             // jhipster-needle-ehcache-add-entry
         };
     }
