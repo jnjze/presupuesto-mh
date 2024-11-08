@@ -3,8 +3,9 @@ name: presupuesto
 services:
   app:
     image: presupuesto
+    restart: always
     environment:
-      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - _JAVA_OPTIONS=-Xmx4g -Xms2g
       - SPRING_PROFILES_ACTIVE=prod,api-docs
       - MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED=true
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/mh_presupuesto_db_prd
